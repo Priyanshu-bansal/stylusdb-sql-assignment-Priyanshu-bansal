@@ -1,5 +1,7 @@
+
 const readCSV = require('../../src/csvReader');
-const parseQuery = require('../../src/queryParser');
+const {parseQuery, parseQueryWhere} = require('../../src/queryParser');
+const {executeSELECTQuery, executeWhereQuery} = require('../../src/index');
 
 test('Read CSV File', async () => {
     const data = await readCSV('./sample.csv');
